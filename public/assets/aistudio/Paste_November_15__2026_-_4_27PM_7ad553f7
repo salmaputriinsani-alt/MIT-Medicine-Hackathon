@@ -1,0 +1,1193 @@
+# BUILD AURELIX AI — PREMIUM PREDICTIVE HEALTH INTELLIGENCE ERP
+
+## 1. PROJECT OVERVIEW
+
+Build a complete, modern, premium-quality, interactive healthcare ERP frontend called **Aurelix AI**, with the tagline:
+
+**Predictive Health Intelligence — Earlier Insights. Better Decisions.**
+
+This is a healthcare decision-support prototype focused on:
+
+- AI-powered early risk detection
+- Diabetic retinopathy screening
+- Chronic kidney disease risk assessment and monitoring
+- Diabetes and metabolic health monitoring
+- Longitudinal patient health analytics
+- Explainable AI insights
+- Clinical decision support
+- Doctor-supervised clinical workflows
+
+The application must look like a real, sophisticated hospital intelligence platform suitable for an innovation competition, university demonstration, or healthcare technology exhibition.
+
+**Critical clinical principle:** The system identifies possible risks and organizes evidence. It never claims to diagnose patients independently. All clinical findings, decisions, and recommendations require qualified healthcare professional review.
+
+This is a **frontend-only prototype** using synthetic data. There is no real medical AI model, authentication service, database, or backend.
+
+Every AI result, evaluation metric, prediction, or risk score must be visibly identified as synthetic, simulated, or illustrative. Never present demo results as real clinical validation.
+
+## 2. TECHNOLOGY AND ARCHITECTURE
+
+Use:
+
+- React with TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React icons
+- Recharts for interactive data visualizations
+- React Router for navigation
+- Reusable components and modular architecture
+- Local TypeScript/JSON clinical demo datasets
+- React state for interactive workflows
+- LocalStorage for demo role sessions and simulated changes
+
+Make this compatible with deployment on Vercel.
+
+Provide a functional SPA with correct route fallbacks and build configuration.
+
+Keep the code clean and modular, including:
+
+- Components
+- Layouts
+- Pages
+- Data
+- Types
+- Services for simulated AI logic
+- Utilities
+- State management
+- Styles
+
+All pages must work with locally available demo data.
+
+No real API keys, cloud authentication, backend connections, or private credentials should be required.
+
+## 3. PREMIUM UI/UX DESIGN SYSTEM
+
+Design this as a 2026 enterprise hospital ERP application.
+
+Avoid generic, basic dashboard templates.
+
+Visual identity:
+
+- Project name: Aurelix AI
+- Logo: custom minimalist heartbeat combined with a protective shield or intelligent orbit
+- Primary color: deep navy blue
+- Secondary color: sophisticated medical teal
+- Accent: muted cyan
+- Background: very light cool gray
+- Cards: white with subtle shadows and fine borders
+- Warning: warm amber
+- High-priority alerts: restrained medical red
+- Success: elegant green
+
+Use a modern font such as Inter.
+
+Design characteristics:
+
+- Professional ERP sidebar
+- Strong information hierarchy
+- Beautiful and readable typography
+- Balanced whitespace
+- Clean data tables
+- Excellent medical analytics charts
+- Polished status badges
+- Subtle hover effects
+- Smooth navigation transitions
+- Consistent button sizing
+- Responsive layouts
+- Elegant empty states
+- High-quality interactive components
+- Accessible contrast and clear focus states
+
+Do not overuse gradients, oversized cards, excessive rounded corners, or irrelevant decorations.
+
+**Sidebar requirements:**
+
+- Fixed left sidebar for desktop
+- Logo and application name at the top
+- Seven navigation tabs for each role
+- Clear active tab background and left indicator
+- Icons for every tab
+- User details, role badge, and logout button at the bottom
+- No scrolling required in the sidebar at default 100% Chrome zoom on a normal laptop viewport
+- Compact, well-spaced navigation
+- Collapsible sidebar on smaller screens
+- Mobile drawer navigation
+- Main content scrolling separately
+
+No public landing page, marketing navbar, or footer is needed.
+
+Use a small page-specific header inside the ERP content area for page titles, contextual actions, dates, notifications, and user identity.
+
+## 4. LOGIN SCREEN — FIRST PAGE
+
+The application must open directly to `/login`.
+
+Design a premium split-screen login interface.
+
+LEFT SIDE: 50–55% width.
+
+Show a beautiful medical technology visual, such as a high-quality hospital environment, diagnostic workstation, or clinical technology composition.
+
+Use elegant dark overlay treatment.
+
+Include:
+
+AURELIX AI
+
+Predictive Health Intelligence
+
+"Turning patient data into earlier insights and doctor-guided decisions."
+
+Add three minimal thematic visual indicators:
+
+- Continuous Health Monitoring
+- Predictive Risk Intelligence
+- Doctor-Verified Decisions
+
+RIGHT SIDE: 45–50% width.
+
+Clean white login panel.
+
+Show:
+
+- Aurelix AI logo
+- Welcome Back
+- "Access your intelligent healthcare workspace"
+- Role selection cards or segmented selector:
+  - Patient
+  - Doctor
+- Demo email input
+- Demo password input
+- Show/hide password button
+- Remember session option
+- Sign In button
+
+The selected role changes the demo credentials and destination.
+
+PATIENT DEMO:
+
+Name: Aisha Rahman  
+Email: aisha.patient@demo.aurelix.ai  
+Password: demo123
+
+DOCTOR DEMO:
+
+Name: Dr. Maya Tan  
+Email: doctor@demo.aurelix.ai  
+Password: demo123
+
+These are fictional demonstration credentials, not secure authentication.
+
+Add a clearly visible "Try Demo Account" feature that fills the selected role's credentials.
+
+After login:
+
+- Patient navigates to `/patient/dashboard`
+- Doctor navigates to `/doctor/dashboard`
+
+The sidebar must contain a functional logout control that clears the local demo session and returns to `/login`.
+
+Protect role-specific routes using frontend demo role state.
+
+Do not let patient role users navigate to doctor views.
+
+## 5. SHARED DEMO DATA — VERY IMPORTANT
+
+Build a coherent, connected synthetic healthcare dataset.
+
+The platform should behave like it contains a real hospital's longitudinal medical records, but every patient must be fictional.
+
+Create 12 different synthetic patients, each with distinct profiles and histories.
+
+Each patient should have:
+
+- Unique patient ID
+- Name
+- Age
+- Sex
+- Relevant medical conditions
+- Diabetes history where applicable
+- Blood glucose observations
+- HbA1c laboratory results
+- Blood pressure observations
+- Heart rate data
+- Weight and BMI
+- Serum creatinine
+- eGFR
+- Urine albumin-to-creatinine ratio (UACR)
+- Screening history
+- Retinal examination records where applicable
+- Clinical notes
+- Clinical review status
+- Follow-up appointments
+- Synthetic risk indicators
+- Care-plan history
+- Historical laboratory trends
+
+Include patients with different trajectories:
+
+1. Stable diabetes management
+2. Worsening glucose control
+3. Rising kidney-risk indicators
+4. Retinopathy screening requiring review
+5. Higher cardiovascular-risk factors
+6. Improving longitudinal indicators
+7. Incomplete screening records
+8. Multiple conditions needing coordinated follow-up
+
+The other four patients should add variety and realism.
+
+The dataset should contain enough history to show meaningful changes.
+
+### PRIMARY PATIENT SCENARIO
+
+Use this patient for patient-role login:
+
+**Aisha Rahman**
+
+- Patient ID: PT-1001
+- Age: 42
+- Sex: Female
+- Condition: Type 2 diabetes
+- Diabetes history: 7 years
+- Associated concern: Elevated blood pressure and kidney-risk markers
+- Assigned doctor: Dr. Maya Tan
+
+Create a believable synthetic medical record.
+
+Example longitudinal records:
+
+HbA1c:
+- Earlier: 8.1%
+- Middle: 7.7%
+- Latest: 7.4%
+
+eGFR:
+- Earlier: 83
+- Middle: 79
+- Latest: 72 mL/min/1.73 m²
+
+UACR:
+- Earlier: 21
+- Middle: 36
+- Latest: 44 mg/g
+
+Retinal screening:
+- Previous scan: no apparent retinopathy
+- Recent simulated screening: possible mild non-proliferative diabetic retinopathy
+- Status: Awaiting physician review
+
+These readings must be connected across pages.
+
+Respect appropriate medical time scales: continuous glucose readings may be displayed throughout a day, but laboratory tests such as HbA1c, eGFR, and UACR must appear only on plausible test dates, not as hourly measurements.
+
+Do not label the patient as having confirmed chronic kidney disease based on limited evidence. Where needed, explain that diagnosis requires clinical assessment and evidence of chronicity.
+
+### TIME-SERIES DEMO DATA
+
+Generate consistent synthetic datasets for:
+
+- 24 hours: frequent glucose readings, heart-rate measurements, and available blood-pressure readings
+- 7 days: daily measurements and trends
+- 30 days: daily aggregated measurements
+- 6 months: laboratory history, screening history, and longitudinal clinical changes
+- 12 months: longer-term screening and medical history where relevant
+
+For glucose, use plausible 15-minute continuous monitoring samples when the patient has a simulated CGM device.
+
+Do not create unrealistic hourly kidney blood-test results.
+
+All date filters and charts must display matching records.
+
+Use the current local date as the demo timeline anchor so the application remains visually current.
+
+## 6. PATIENT PORTAL — SEVEN SIDEBAR TABS
+
+### TAB 1: MY DASHBOARD
+
+Create a premium patient command center.
+
+Header:
+
+"Good morning, Aisha"
+
+Subtitle:
+
+"Your health overview and latest doctor-reviewed updates."
+
+Show a polished dashboard with:
+
+TOP SUMMARY CARDS:
+
+- Latest Glucose Reading
+- Latest HbA1c
+- Latest eGFR
+- Upcoming Appointment
+
+Each card should show:
+
+- Current value
+- Unit
+- Relevant reading or test date
+- Comparison with a previous record
+- Status or contextual interpretation
+- Mini sparkline when appropriate
+
+MAIN DASHBOARD:
+
+1. Interactive 24-hour blood-glucose chart
+2. Seven-day glucose trend
+3. Latest AI-generated risk observations
+4. Recent doctor-reviewed updates
+5. Important follow-up reminders
+6. Eye-screening status
+7. Kidney monitoring summary
+
+Add a "What needs attention?" section showing the most important unresolved items, based on the synthetic scenario.
+
+Give priority to clarity, not too many competing charts.
+
+Use restrained, informative alerts.
+
+Patients should be able to navigate directly from summary cards to detailed pages.
+
+### TAB 2: HEALTH TIMELINE
+
+This is a major visual feature.
+
+Create a beautiful chronological patient history dashboard.
+
+Time filters:
+
+- 24 Hours
+- 7 Days
+- 30 Days
+- 6 Months
+- 12 Months
+
+Metric selector:
+
+- Glucose
+- Blood Pressure
+- Heart Rate
+- HbA1c
+- Kidney Function
+- Weight
+
+Show appropriate data availability for each metric.
+
+For example, selecting "24 Hours" and "HbA1c" should display the latest available test and its date, not invent hourly tests.
+
+Include:
+
+- Interactive time-series charts
+- Comparison to earlier periods
+- Highlighted observations
+- Medical visit markers
+- Laboratory test markers
+- Screening events
+- Doctor review markers
+- Downloadable local demo report
+
+Add a clinical-event timeline underneath.
+
+Example events:
+
+"Blood glucose trend reviewed"
+
+"Kidney laboratory results added"
+
+"Retinal screening completed"
+
+"Follow-up requested by doctor"
+
+Clicking an event opens a details panel.
+
+### TAB 3: AI RISK INSIGHTS
+
+Create an explainable-AI intelligence page.
+
+Headline:
+
+"Understand your health trends"
+
+Show three illustrated AI monitoring categories:
+
+- Diabetes Control Patterns
+- Kidney Health Risk Signals
+- Retinal Screening Observations
+
+For every category show:
+
+- Synthetic risk indicator
+- Main contributing observations
+- Supporting patient data
+- Trend direction
+- Most recent analysis date
+- Doctor review status
+
+Use visual risk cards, trend charts, and an explainability panel.
+
+For kidney-risk indicators, demonstrate how longitudinal eGFR, UACR, diabetes history, and blood-pressure trends contribute to the simulated assessment.
+
+Use a waterfall or horizontal contribution chart clearly titled:
+
+"Illustrative factors influencing the demo risk assessment"
+
+Do not call the feature-importance visualization validated SHAP or genuine model explanations unless an actual model is integrated.
+
+Add a "Why was this flagged?" interaction that explains the underlying observations in plain English.
+
+Show a clear message:
+
+"AI-generated demonstration insights are not medical diagnoses. Your doctor reviews clinical findings and determines appropriate care."
+
+### TAB 4: EYE SCREENING
+
+Create a visually impressive diabetic retinopathy monitoring module.
+
+Display:
+
+- Latest screening status
+- Screening date
+- Review status
+- Retinal image visualization
+- Historical image comparison
+- Screening timeline
+- Educational retinal anatomy illustration
+
+Use locally available illustrative retinal fundus imagery or clearly labeled synthetic graphics.
+
+If possible, show two retina panels:
+
+LEFT: Previous screening example  
+RIGHT: Recent screening example
+
+Display an interactive magnifier or zoom control.
+
+Create educational annotations for potential retinal observations such as:
+
+- Microaneurysms
+- Hemorrhage-like features
+- Exudate-like features
+
+All overlays should be explicitly marked as illustrative, not real automated medical image analysis.
+
+Add screening stage categories:
+
+- No apparent retinopathy
+- Mild NPDR
+- Moderate NPDR
+- Severe NPDR
+- Proliferative DR
+
+These are clinical categories used for explanation and doctor review, not automatically confirmed diagnoses.
+
+Show Aisha's recent demo result as "Possible mild NPDR — unconfirmed."
+
+Allow the patient to view the physician-confirmed report once the doctor approves or updates it.
+
+Add a "How screening works" educational section.
+
+A user may upload an image for local preview, but the UI must clearly state that live AI image inference is not connected. Never fabricate an analysis for a newly uploaded image.
+
+### TAB 5: KIDNEY HEALTH
+
+Create a dedicated chronic kidney disease monitoring intelligence dashboard.
+
+Include:
+
+- eGFR history
+- UACR history
+- Creatinine trends
+- Blood-pressure trends
+- Kidney monitoring milestones
+- Longitudinal risk signals
+
+Use an interactive eGFR trend line.
+
+Include an educational KDIGO-style kidney risk grid based on eGFR and albuminuria categories.
+
+Highlight the latest available measurement combination and clearly mark it as an illustrative interpretation.
+
+Provide filtering by 3, 6, and 12 months.
+
+Include a visual:
+
+"Kidney Health Trend"
+
+Show historical measurements and a clearly separated, illustrative forecast section.
+
+Forecasts must not be passed off as clinically validated disease progression estimates.
+
+Show a feature contribution breakdown:
+
+- Historical eGFR
+- Albuminuria
+- Diabetes history
+- Blood pressure
+- Available clinical observations
+
+Make it clear that only a doctor can confirm chronic kidney disease or determine its stage.
+
+### TAB 6: MY CARE PLAN
+
+Create an engaging care coordination page.
+
+Show:
+
+- Assigned doctor
+- Latest clinical assessment
+- Physician-reviewed care plan
+- Follow-up tasks
+- Scheduled laboratory tests
+- Screening reminders
+- Appointments
+- Notes received from the clinician
+
+Use timeline and task-card layouts.
+
+Distinguish between:
+
+- AI-generated observation
+- Awaiting clinician review
+- Physician-approved care-plan item
+- Completed follow-up
+
+Patients can:
+
+- Mark personal tracking tasks complete
+- Add basic observations to a personal journal
+- View physician decisions
+- Track follow-up completion
+
+Patients cannot approve their own clinical findings or independently issue prescriptions.
+
+### TAB 7: APPOINTMENTS & MESSAGES
+
+Build a realistic healthcare communication interface.
+
+Include:
+
+- Upcoming appointments
+- Past appointments
+- Calendar-style appointment view
+- Assigned doctor profile
+- Message inbox
+- Message composer
+- Appointment details
+- Notification center
+
+Use fictional local demo messages and appointment data.
+
+Patients can submit a mock appointment request, reply to fictional messages, and see UI updates.
+
+Mark these as demo actions, not messages actually delivered to medical staff.
+
+## 7. DOCTOR PORTAL — SEVEN SIDEBAR TABS
+
+Doctor login:
+
+Dr. Maya Tan
+
+The doctor portal should be more advanced, data-dense, and clinically oriented than the patient portal.
+
+### TAB 1: COMMAND CENTER
+
+Create an impressive clinical intelligence dashboard.
+
+Header:
+
+"Clinical Intelligence Command Center"
+
+Subtitle:
+
+"Prioritize patient reviews through longitudinal data and AI-assisted signals."
+
+TOP KPI CARDS:
+
+- Total Monitored Patients
+- Patients Requiring Review
+- Pending Retinal Screenings
+- Pending Clinical Decisions
+
+Use data-derived counts from the synthetic patient registry.
+
+MAIN CONTENT:
+
+1. Patient risk distribution
+2. AI triage queue preview
+3. Kidney monitoring alerts
+4. Retinal screening review queue
+5. Recent clinical events
+6. Pending follow-ups
+7. Weekly patient-monitoring activity
+
+Include charts:
+
+- Patient risk-category distribution
+- Screening completion trend
+- Review workload by clinical category
+
+Show a prominent:
+
+"Needs Clinical Attention"
+
+table with:
+
+- Patient
+- Patient ID
+- Clinical signal
+- Supporting evidence
+- Priority
+- Review status
+- View Patient action
+
+Avoid overwhelming the interface with large redundant charts.
+
+### TAB 2: PATIENT REGISTRY
+
+Create a full-featured ERP patient management interface.
+
+Show all 12 synthetic patients.
+
+Use a modern, interactive table with:
+
+- Patient name
+- ID
+- Age
+- Known conditions
+- Latest HbA1c
+- Latest eGFR
+- Retinal screening status
+- AI flag
+- Doctor review status
+- Last visit
+
+Provide:
+
+- Search
+- Sorting
+- Status filters
+- Risk-category filters
+- Pagination
+- Patient detail drawer
+- Clickable patient records
+
+Clicking a patient opens a comprehensive Patient 360 profile.
+
+PATIENT 360 PROFILE:
+
+- Demographics
+- Medical history
+- Latest measurements
+- Laboratory history
+- Vital-sign trends
+- Retinal screening
+- Kidney monitoring
+- AI observations
+- Doctor notes
+- Care-plan history
+- Review status
+- Recent appointments
+
+All selected patient data must propagate correctly into charts and modules.
+
+### TAB 3: AI TRIAGE QUEUE
+
+This should be one of the strongest features in the prototype.
+
+Create an intelligent review prioritization workspace.
+
+Show a queue of patients whose synthetic records have been flagged for clinical review.
+
+Categories:
+
+- Glucose variability
+- Kidney-risk signal
+- Retinal screening observation
+- Abnormal trend
+- Incomplete follow-up
+- Missing screening
+
+Each triage card should show:
+
+- Patient name
+- Triggering observation
+- Relevant measurements
+- Historical change
+- Illustrative priority
+- Data completeness
+- AI-generated explanation
+- Physician-review status
+
+Allow the doctor to:
+
+- Open patient
+- Review evidence
+- Mark for follow-up
+- Request additional information
+- Mark observation reviewed
+- Dismiss a synthetic flag with a documented reason
+
+Add status tabs:
+
+- Pending
+- Under Review
+- Reviewed
+- Follow-up Requested
+
+Make the workflow functional with local demo state.
+
+Risk categorization must clearly be described as simulated triage prioritization, not a validated medical emergency scoring tool.
+
+### TAB 4: RETINAL SCREENING
+
+Create a diagnostic-imaging-style workspace.
+
+Include a screening queue showing patients, screening dates, and review status.
+
+Selecting a patient opens a retina analysis workspace:
+
+LEFT PANEL:
+
+- Retinal fundus illustration
+- Zoom controls
+- Educational lesion overlays
+- Image comparison selector
+
+RIGHT PANEL:
+
+- Patient details
+- Screening history
+- Simulated AI observation
+- Possible retinopathy stage
+- Evidence summary
+- Doctor's assessment
+- Review actions
+
+Use clearly labeled sample/illustrative retinal images rather than implying real automated diagnostic processing.
+
+Create a professional stage-classification diagram.
+
+Add physician action controls:
+
+- Confirm reviewed observations
+- Record a different clinical assessment
+- Request specialist review
+- Request repeat screening
+- Save review note
+
+A doctor confirmation changes the screening review status.
+
+That change should be visible in the patient portal.
+
+Do not automatically convert simulated AI output into a confirmed diagnosis.
+
+### TAB 5: KIDNEY INTELLIGENCE
+
+Create a specialist-level monitoring dashboard for longitudinal kidney health.
+
+Show a patient selector.
+
+Include:
+
+- eGFR trend
+- UACR progression
+- Serum creatinine
+- Blood pressure
+- Relevant diabetes markers
+- Laboratory timeline
+- Missing-data indicators
+
+Build an interactive kidney risk-category matrix using eGFR G categories and UACR A categories.
+
+Provide a data-availability check before displaying any interpretation.
+
+Include:
+
+"KIDNEY TREND ANALYSIS"
+
+Use actual synthetic historical records.
+
+Also include:
+
+"ILLUSTRATIVE FORECAST SANDBOX"
+
+Show a sample short-term or annual trajectory as a demonstration only.
+
+Provide uncertainty shading and explicitly label the visualization:
+
+"Illustrative simulation — not a validated patient-specific forecast."
+
+Display an explainability panel showing the patient observations underlying the synthetic risk flag.
+
+Include a scenario-testing section where the doctor can adjust hypothetical values such as:
+
+- Blood-pressure trend
+- HbA1c scenario
+- UACR observation
+
+The chart should respond to scenario inputs but must not imply these changes establish real causal effects or treatment outcomes.
+
+Allow the doctor to request additional testing, document the interpretation, and mark the record reviewed.
+
+### TAB 6: CLINICAL DECISION SUPPORT
+
+This is the most important workflow differentiator.
+
+Design a workspace that demonstrates:
+
+**AI assists. Doctors decide.**
+
+Structure this page into three columns or panels.
+
+LEFT: Patient Context
+
+- Patient identity
+- Medical history
+- Current observations
+- Relevant laboratory data
+- Recent screening
+- Important historical changes
+
+CENTER: AI-Assisted Evidence
+
+- Flagged clinical indicators
+- Supporting observations
+- Simulated evidence reasoning
+- Data limitations
+- Potential next review areas
+- Missing clinical information
+
+RIGHT: Physician Decision
+
+- Doctor assessment
+- Review outcome
+- Additional testing request
+- Specialist review request
+- Follow-up timing
+- Clinical notes
+- Save decision
+
+Clinical review status options:
+
+- Pending Review
+- Under Review
+- Additional Evidence Required
+- Physician Reviewed
+- Follow-up Requested
+
+Create a clearly staged workflow:
+
+1. AI flags a concern
+2. Doctor opens patient evidence
+3. Doctor reviews supporting information
+4. Doctor documents independent clinical judgment
+5. Doctor saves the decision
+6. Approved patient-facing updates appear in the patient portal
+
+Include explicit buttons:
+
+- Review Evidence
+- Request Additional Tests
+- Record Clinical Decision
+- Save Review
+- View Audit History
+
+No simulated AI suggestion should be automatically approved.
+
+Do not generate medication doses, automatic prescriptions, or definitive treatment plans.
+
+The clinical decision must be controlled by the doctor role.
+
+All decisions should be saved to local demo state and appear in the patient's relevant record.
+
+### TAB 7: REPORTS & AUDIT
+
+Build a premium clinical intelligence reporting interface.
+
+Include:
+
+- Patient monitoring summaries
+- Review completion
+- Screening status
+- Kidney monitoring reports
+- AI observation trends
+- Doctor decision history
+- Simulation model metrics
+- Audit log
+
+Show an attractive analytics dashboard with:
+
+- Review workload over time
+- Patient screening status
+- Risk-category counts
+- Doctor decision outcomes
+
+Create an "AI Model Evaluation — Synthetic Demonstration" section.
+
+Show educational metrics for a simulated evaluation dataset:
+
+- Precision
+- Recall / Sensitivity
+- Specificity
+- F1 Score
+- Confusion Matrix
+
+All numerical values must be explicitly described as fictional synthetic demonstration results.
+
+Use a coherent synthetic confusion matrix and derive precision, recall, specificity, and F1 from it. Do not invent unrelated metric values that contradict each other.
+
+Explain briefly that real clinical AI deployment requires representative datasets, independent validation, calibration, bias evaluation, and regulatory and clinical oversight.
+
+Include a simulated audit table containing:
+
+- Timestamp
+- Doctor
+- Patient ID
+- Review action
+- Previous status
+- New status
+
+Support local CSV export of demo report records.
+
+## 8. SIMULATED AI ENGINE
+
+Although there is no backend, create transparent, deterministic demo logic.
+
+The frontend should not simply display disconnected static predictions.
+
+Build a lightweight synthetic risk-analysis service that reads the currently selected patient dataset.
+
+For demonstration purposes, it can combine:
+
+- Blood glucose variability
+- HbA1c history
+- eGFR history
+- UACR history
+- Available blood-pressure measurements
+- Screening records
+- Medical history flags
+
+The service should return:
+
+- A simulated risk category
+- Contributing observations
+- Trend direction
+- Data completeness
+- Explanation
+- Review status
+
+Use clearly explained threshold-based demonstration logic and synthetic examples rather than pretending that a trained model exists.
+
+For retinal screening, return only stored fictional screening observations from predefined sample cases.
+
+For kidney monitoring, distinguish between observed historical trends and simulated future trajectories.
+
+Use one source of truth for all patient data.
+
+Changing a patient in the doctor portal must update every relevant patient-specific component.
+
+Changes created by the doctor must be reflected in:
+
+- Patient Registry
+- Triage Queue
+- Clinical Decision Support
+- Reports
+- Patient Care Plan
+- Patient Screening Status
+
+Persist appropriate simulated workflow updates through localStorage.
+
+Provide a "Reset Demo Data" function.
+
+## 9. INTERACTIVE FEATURES
+
+Every important interaction must work.
+
+Implement:
+
+- Login role switching
+- Demo sign-in
+- Logout
+- Sidebar navigation
+- Patient switching
+- Chart date-range switching
+- Interactive chart tooltips
+- Search and filtering
+- Clinical review workflow
+- Retinal image example switching
+- Retina zoom
+- Patient detail drawer
+- Lab-record details
+- AI explanation drawer
+- Simulated risk scenario controls
+- Clinical decision saving
+- Appointment request simulation
+- Messages simulation
+- Local report export
+- Notification dropdown
+- Demo reset
+- Loading and empty states
+- Responsive mobile navigation
+
+No dummy buttons, dead dropdowns, or nonfunctional filters.
+
+Do not add irrelevant features.
+
+All major views must be fully implemented.
+
+## 10. VISUAL DATA REQUIREMENTS
+
+Use high-quality analytical visualization throughout the system.
+
+Include the following where appropriate:
+
+- Multi-series time-series line charts
+- Area charts with subtle gradients
+- Glucose daily-pattern charts
+- HbA1c progression
+- Kidney-function progression
+- UACR changes
+- Risk-category distribution
+- Retinal screening progression timeline
+- Clinical review workload charts
+- Confusion matrix
+- Educational kidney risk heatmap
+- Explainable risk-contribution chart
+- Event timeline
+- Small KPI sparklines
+
+Charts should have:
+
+- Readable axes
+- Correct units
+- Meaningful labels
+- Hover tooltips
+- Suitable legends
+- Clear reference ranges where appropriate
+- Responsive containers
+- Consistent time scales
+- Honest display of missing values
+
+Avoid using pie charts everywhere.
+
+Do not fabricate measurements to fill missing clinical histories.
+
+Make visualizations polished enough for a healthcare innovation competition demonstration.
+
+## 11. DEMO STORYTELLING
+
+The application should support a compelling end-to-end demonstration.
+
+Main storyline:
+
+Aisha Rahman has Type 2 diabetes.
+
+The system continuously visualizes her available glucose readings.
+
+Her historical laboratory records show a change in kidney-related markers.
+
+Her latest illustrative retinal screening includes an unconfirmed observation that may warrant clinical review.
+
+Aurelix AI organizes these observations and flags them for her assigned doctor.
+
+Dr. Maya Tan opens her clinical workspace.
+
+The doctor reviews:
+
+- Patient history
+- HbA1c trends
+- Kidney laboratory trends
+- Retinal screening illustration
+- Simulated AI explanations
+
+The doctor records an independent review decision and requests appropriate follow-up.
+
+When the doctor saves the decision, the patient can see the updated, physician-reviewed information in her care plan.
+
+This full story should be reproducible through the UI using the supplied demo data.
+
+Include a compact "Demo Scenario" helper in the login page or a discreet internal help panel, showing the sequence of steps without disrupting the professional design.
+
+## 12. SECURITY, TRUST, AND MEDICAL SAFETY
+
+Use synthetic patients only.
+
+Never imply this is ready for clinical deployment.
+
+Add a small persistent "Demo Environment" indicator.
+
+Include visible labels where needed:
+
+- Simulated AI Assessment
+- Synthetic Patient Data
+- Physician Review Required
+- Illustrative Model Metrics
+- Not for Clinical Use
+
+Avoid making the UI appear frightening or alarming.
+
+Provide clear explanations of limitations.
+
+Use realistic clinical terminology and data units.
+
+Do not falsely describe metrics as measured real-world model performance.
+
+Do not claim uploaded retinal scans have been analyzed by AI when no image-inference model exists.
+
+Do not imply the application complies with specific healthcare certifications or regulations.
+
+Never display definitive disease diagnoses based solely on simulated risk scores.
+
+## 13. QUALITY AND COMPLETENESS
+
+Generate the full React frontend, not just a landing page, screenshot, architecture diagram, or mockup.
+
+Build:
+
+- Complete login screen
+- Complete patient layout
+- Seven patient pages
+- Complete doctor layout
+- Seven doctor pages
+- Shared interactive components
+- Complete synthetic datasets
+- Simulated AI assessment logic
+- State persistence
+- Functional navigation
+- Fully working charts
+- Appropriate empty states
+- Responsive styling
+
+Prioritize an impressive initial experience.
+
+Both dashboards should feel like finished enterprise software.
+
+Do not leave pages saying "Coming Soon."
+
+Do not omit the medical visualizations.
+
+Do not rely on broken external image links. Include reliable local SVG illustrations or clear image fallbacks.
+
+Ensure the code builds successfully and avoids TypeScript errors, broken imports, and missing dependencies.
+
+## 14. FINAL DESIGN DIRECTION
+
+Imagine a product combining:
+
+- The operational clarity of an enterprise ERP
+- The polished usability of a modern SaaS dashboard
+- The data depth of a hospital monitoring platform
+- The analytical sophistication of an AI decision-support workspace
+
+The result should be professional, visually memorable, responsive, clinically cautious, and impressive to competition judges.
+
+The user must immediately understand three things:
+
+1. Aurelix AI connects longitudinal patient data into meaningful, understandable visuals.
+2. Aurelix AI highlights potential health risks earlier through simulated predictive analysis and clear supporting evidence.
+3. Medical professionals remain responsible for the final clinical decisions.
+
+**Now generate the complete functional Aurelix AI frontend with both role-specific portals, all 14 pages, coherent synthetic data, polished UI/UX, and working demo interactions.**

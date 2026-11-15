@@ -1,0 +1,8 @@
+{
+  "name": "Aurelix AI",
+  "description": "Predictive Health Intelligence ERP — Earlier Insights. Better Decisions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
