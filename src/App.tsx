@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { AurelixProvider, useAurelix } from './context/AurelixContext';
 import { LoginPage } from './pages/LoginPage';
 import { PatientAiInsights } from './pages/patient/PatientAiInsights';
@@ -185,6 +186,7 @@ export default function App() {
           {/* Fallback */}
           <Route path="*" element={<RootRedirect />} />
         </Routes>
+        <Analytics />
       </BrowserRouter>
     </AurelixProvider>
   );
